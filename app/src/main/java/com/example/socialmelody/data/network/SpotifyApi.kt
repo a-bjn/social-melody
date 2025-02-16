@@ -1,4 +1,4 @@
-package com.example.socialmelody.data.model.network
+package com.example.socialmelody.data.network
 
 class SpotifyApi {
 }
