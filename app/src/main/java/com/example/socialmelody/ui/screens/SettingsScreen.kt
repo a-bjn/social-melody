@@ -1,4 +1,4 @@
-package com.example.socialmelody.ui.theme.screens
+package com.example.socialmelody.ui.screens
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
@@ -8,10 +8,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.example.socialmelody.ui.theme.navigation.Screen
+import com.example.socialmelody.ui.navigation.Screen
 
 @Composable
-fun LoginScreen(navController: NavController) {
+fun SettingsScreen(navController: NavController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -19,21 +19,21 @@ fun LoginScreen(navController: NavController) {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Text(text = "Welcome to SocialMelody!", fontSize = 24.sp, fontWeight = androidx.compose.ui.text.font.FontWeight.Bold)
+        Text(text = "Settings", fontSize = 24.sp, fontWeight = androidx.compose.ui.text.font.FontWeight.Bold)
         Spacer(modifier = Modifier.height(16.dp))
-        Text(text = "Login to continue", fontSize = 18.sp)
+        Text(text = "Manage your preferences", fontSize = 18.sp)
 
         Spacer(modifier = Modifier.height(32.dp))
 
         Button(
             onClick = {
-                // TODO: Implement Spotify OAuth authentication
-                navController.navigate(Screen.Main.route) {
-                    popUpTo(Screen.Login.route) { inclusive = true } // Clear backstack
+                // TODO: Implement Spotify logout logic
+                navController.navigate(Screen.Login.route) {
+                    popUpTo(Screen.Main.route) { inclusive = true }
                 }
             }
         ) {
-            Text("Login with Spotify")
+            Text("Log Out")
         }
     }
 }

@@ -1,6 +1,5 @@
 package com.example.socialmelody.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -32,6 +31,15 @@ private val LightColorScheme = lightColorScheme(
     onSurface = Color(0xFF1C1B1F),
     */
 )
+private val SpotifyDarkColors = darkColorScheme(
+    primary = SpotifyGreen,
+    onPrimary = DarkBackground,
+    background = DarkBackground,
+    onBackground = LightText,
+    surface = DarkBackground,
+    onSurface = LightText,
+)
+
 
 @Composable
 fun SocialMelodyTheme(
@@ -51,7 +59,7 @@ fun SocialMelodyTheme(
     }
 
     MaterialTheme(
-        colorScheme = colorScheme,
+        colorScheme = SpotifyDarkColors,
         typography = Typography,
         content = content
     )

@@ -1,4 +1,4 @@
-package com.example.socialmelody.ui.theme.navigation
+package com.example.socialmelody.ui.navigation
 
 sealed class Screen(val route: String) {
     data object Login : Screen("login")

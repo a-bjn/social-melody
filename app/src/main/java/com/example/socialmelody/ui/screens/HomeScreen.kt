@@ -1,4 +1,4 @@
-package com.example.socialmelody.ui.theme.screens
+package com.example.socialmelody.ui.screens
 
 
 import androidx.compose.foundation.layout.*
@@ -9,7 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.example.socialmelody.ui.theme.navigation.Screen
+import com.example.socialmelody.ui.navigation.Screen
 
 @Composable
 fun HomeScreen(navController: NavController) {

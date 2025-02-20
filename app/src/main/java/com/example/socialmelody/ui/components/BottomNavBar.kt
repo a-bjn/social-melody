@@ -1,11 +1,11 @@
-package com.example.socialmelody.ui.theme.components
+package com.example.socialmelody.ui.components
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
-import com.example.socialmelody.ui.theme.navigation.Screen
+import com.example.socialmelody.ui.navigation.Screen
 
 @Composable
 fun BottomNavBar(navController: NavController) {
