@@ -7,7 +7,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
 import androidx.navigation.compose.*
 import com.example.socialmelody.ui.components.BottomNavBar
-import com.example.socialmelody.ui.navigation.Screen
+import com.example.socialmelody.data.Screen
 
 @Composable
 fun MainScreen(navController: NavController) {
@@ -21,8 +21,9 @@ fun MainScreen(navController: NavController) {
             startDestination = Screen.Home.route,
             modifier = Modifier.padding(innerPadding)
         ) {
-            composable(Screen.Home.route) { HomeScreen(innerNavController) }
+            composable(Screen.Home.route) { HomeScreen() }
             composable(Screen.NowPlaying.route) { NowPlayingScreen() }
+            composable(Screen.Library.route) { LibraryScreen() }
             composable(Screen.Search.route) { SearchScreen() }
             composable(Screen.Settings.route) { SettingsScreen(navController) }
         }

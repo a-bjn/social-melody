@@ -9,7 +9,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.example.socialmelody.ui.navigation.Screen
+import com.example.socialmelody.data.Screen
 import com.example.socialmelody.ui.screens.LoginScreen
 import com.example.socialmelody.ui.screens.MainScreen
 

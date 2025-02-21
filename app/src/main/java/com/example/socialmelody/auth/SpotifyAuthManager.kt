@@ -1,11 +1,11 @@
-package com.example.socialmelody.ui.auth
+package com.example.socialmelody.auth
 
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.util.Log
 import androidx.navigation.NavController
-import com.example.socialmelody.ui.navigation.Screen
+import com.example.socialmelody.data.Screen
 import net.openid.appauth.*
 
 class SpotifyAuthManager(private val context: Context) {

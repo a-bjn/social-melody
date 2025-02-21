@@ -8,7 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.example.socialmelody.ui.navigation.Screen
+import com.example.socialmelody.data.Screen
 
 @Composable
 fun SettingsScreen(navController: NavController) {

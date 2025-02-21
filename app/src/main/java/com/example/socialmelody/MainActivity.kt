@@ -8,7 +8,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.example.socialmelody.ui.auth.SpotifyAuthManager
+import com.example.socialmelody.auth.SpotifyAuthManager
 import com.example.socialmelody.ui.theme.SocialMelodyTheme
 
 class MainActivity : ComponentActivity() {

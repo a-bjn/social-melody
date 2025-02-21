@@ -61,4 +61,5 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(libs.androidx.navigation.compose.v260)
     implementation(libs.okhttp)
+    implementation(libs.coil.compose)
 }

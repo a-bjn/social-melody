@@ -5,11 +5,11 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
-import com.example.socialmelody.ui.navigation.Screen
+import com.example.socialmelody.data.Screen
 
 @Composable
 fun BottomNavBar(navController: NavController) {
-    val screens = listOf(Screen.Home, Screen.NowPlaying, Screen.Search, Screen.Settings)
+    val screens = listOf(Screen.Home, Screen.NowPlaying, Screen.Library, Screen.Search, Screen.Settings)
     val currentRoute = navController.currentBackStackEntryAsState().value?.destination?.route
 
     NavigationBar {

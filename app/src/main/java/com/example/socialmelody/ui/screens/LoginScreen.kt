@@ -14,7 +14,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.example.socialmelody.ui.auth.SpotifyAuthManager
+import com.example.socialmelody.auth.SpotifyAuthManager
 
 @Composable
 fun LoginScreen(navController: NavController) {
