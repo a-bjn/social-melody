@@ -12,6 +12,7 @@ object AuthConfig {
         "user-modify-playback-state",
         "playlist-read-private",
         "playlist-modify-private",
-        "user-read-recently-played"
+        "user-read-recently-played",
+        "user-library-read",
     ).joinToString(" ")
 }

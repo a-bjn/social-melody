@@ -16,14 +16,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.example.socialmelody.api.SpotifyApiController
 import com.example.socialmelody.data.Playlist
 import com.example.socialmelody.data.RecentTrack
 import com.example.socialmelody.ui.components.PlaylistItem
 import com.example.socialmelody.ui.components.RecentTrackItem
+import com.example.socialmelody.utils.getAccessToken
 
 @Composable
-fun HomeScreen() {
+fun HomeScreen(navController: NavController) {
     val context = LocalContext.current
     val accessToken = remember { getAccessToken(context) }
     var playlists by remember { mutableStateOf<List<Playlist>>(emptyList()) }
@@ -73,8 +75,10 @@ fun HomeScreen() {
             modifier = Modifier.fillMaxWidth()
         ) {
             items(playlists) { playlist ->
-                // Replace with your own composable to display a playlist card.
-                PlaylistItem(playlist)
+                PlaylistItem(playlist = playlist) {
+                    // Navigate to playlist detail screen.
+                    navController.navigate("playlist_detail/${playlist.id}")
+                }
             }
         }
         Spacer(modifier = Modifier.height(16.dp))
@@ -103,10 +107,4 @@ fun HomeScreen() {
             )
         }
     }
-}
-
-fun getAccessToken(context: Context): String? {
-    val sharedPreferences: SharedPreferences =
-        context.getSharedPreferences("spotify_prefs", Context.MODE_PRIVATE)
-    return sharedPreferences.getString("access_token", null)
 }

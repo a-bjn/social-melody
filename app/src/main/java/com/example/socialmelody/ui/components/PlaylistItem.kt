@@ -16,11 +16,12 @@ import coil.compose.AsyncImage
 import com.example.socialmelody.data.Playlist
 
 @Composable
-fun PlaylistItem(playlist: Playlist) {
+fun PlaylistItem(playlist: Playlist, onClick: () -> Unit) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .height(100.dp),
+            .height(100.dp)
+            .clickable(onClick = onClick),
         shape = RoundedCornerShape(10.dp),
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
     ) {
@@ -29,8 +30,7 @@ fun PlaylistItem(playlist: Playlist) {
                 AsyncImage(
                     model = playlist.imageUrl,
                     contentDescription = "Playlist Cover",
-                    modifier = Modifier
-                        .size(84.dp)
+                    modifier = Modifier.size(84.dp)
                 )
             } else {
                 Box(

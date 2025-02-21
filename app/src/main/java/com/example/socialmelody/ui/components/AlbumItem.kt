@@ -30,8 +30,7 @@ fun AlbumItem(album: Album, onClick: () -> Unit) {
                 AsyncImage(
                     model = album.imageUrl,
                     contentDescription = "Album Cover",
-                    modifier = Modifier
-                        .size(84.dp)
+                    modifier = Modifier.size(84.dp)
                 )
             } else {
                 Box(
